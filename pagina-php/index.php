@@ -1,3 +1,4 @@
+// Hacemos un arreglo con datos de ejemplo
 $data = [
     'title' => 'Untitled-1',
     'created' => '2015-01-01',
@@ -18,6 +19,7 @@ echo "
         <tbody>
 ";
 
+// Para cada elemento del arreglo colocamos una fila
 foreach($data as $key => $value){
     echo "
             <tr>
