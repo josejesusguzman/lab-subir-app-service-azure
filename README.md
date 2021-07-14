@@ -44,3 +44,23 @@ __________________
 ```GitHub
 git init
 ```
+4. Inicia un proyecto de Node.js con el siguiente comando:
+```cmd
+npm init
+```
+
+5. Instala las librerías que necesitas
+```cmd
+npm install
+```
+6. Si se sobrescribió el archivo `package.json` copia y pega el de este proyecto
+7. Revisa el código de la API ejemplo
+8. Inicia el proyecto y prueba su funcionamiento
+```cmd
+npm start
+```
+9. Verifica su funcionamiento en aplicaciones como Talend API Tester o Postman
+
+- Si accedes a http://localhost:3000/ deberías ver el mensaje "Hola Mundo" y en la consola deberás ver "El servidor se está ejecutando en http://localhost:3000/"
+
+- Si envías un post con el parametro `name=Juan` deberías ver el mensaje "Hola Juan" en la consola
