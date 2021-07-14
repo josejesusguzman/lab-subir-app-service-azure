@@ -31,6 +31,12 @@ Puede ser usado para realizar:
 ```GitHub
 git init
 ```
+
+4. Revisa el código de la página ejemplo
+
+5. Puedes probar la página instalando XAMP o similares
+
+6.  Sube el proyecto a App Service
 __________________
 ## Práctica 2: Despliegue de una API en Node.js
 1. Copia el código de la API ejemplo que se encuentra en [api-nodejs](/api-nodejs)
@@ -63,4 +69,6 @@ npm start
 
 - Si accedes a http://localhost:3000/ deberías ver el mensaje "Hola Mundo" y en la consola deberás ver "El servidor se está ejecutando en http://localhost:3000/"
 
-- Si envías un post con el parametro `name=Juan` deberías ver el mensaje "Hola Juan" en la consola
+- Si envías una petición post con el parametro `name=Juan` deberías ver el mensaje "Juan" en la consola
+
+10. Sube el proyecto a App Service
