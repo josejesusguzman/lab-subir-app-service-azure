@@ -18,6 +18,7 @@ Puede ser usado para realizar:
 - [CLI de Azure](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 - [Git](https://git-scm.com/downloads)
 - [Cuenta de GitHub](https://github.com/)
+- [Node.js](https://nodejs.org/es/download/)
 
 ## Práctica 1: Despliegue de una aplicación web en PHP
 
