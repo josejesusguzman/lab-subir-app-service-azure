@@ -72,3 +72,63 @@ npm start
 - Si envías una petición post con el parametro `name=Juan` deberías ver el mensaje "Juan" en la consola
 
 10. Sube el proyecto a App Service
+
+## Sube el proyecto a App Service
+
+- Remplaza las \<LETRAS EN MAYUSCULAS Y DENTRO DE MAYOR Y MENOR QUE\> dependiendo de tus preferencias 
+
+1. Crea un plan de App Service. Puede hacerlo al crear un servicio de App Service desde el portal de Azure o usando la linea de comando CLI de Azure.
+
+```CLI de Azure
+az appservice plan create --name <NOMBRE_PLAN_APP_SERVICE> --resource-group <NOMBRE_GRUPO_DE_RECURSOS> --sku FREE
+```
+
+2. Crea el servicio de App Service. Igualmente puedes hacerlo como desees
+
+- Ajusta el parametro después de --runtime dependiendo del lenguaje de programación que estés usando. Para PHP sería algo así `"PHP|7.2"`
+
+```CLI de Azure
+az webapp create -n <NOMBRE_APP_SERVICE> -g <NOMBRE_GRUPO_DE_RECURSOS> -p <NOMBRE_PLAN_APP_SERVICE> --runtime "node|10.6" --deployment-local-git
+```
+
+3. Si anteriormente no has establecido las credenciales de implementación de nivel de usuario o si no recuerdas tu contraseña, ejecuta el siguiente comando:
+
+
+```CLI de Azure
+az webapp deployment user set --user-name <USERNAME_GITHUB>
+```
+
+4. Obten la dirección de implementación de Git con:
+```CLI de Azure
+
+az webapp deployment source config-local-git -n <NOMBRE_APP_SERVICE> -g <NOMBRE_GRUPO_DE_RECURSOS>
+```
+
+5. Agrega el control remoto a tu código con:
+
+- **Nota**: a debes tener el repositorio local creado
+- **Nota**: Si falla la implementación cambia el código a la rama master con `git branch master ` y después `git checkout master`
+
+```cmd
+git remote add webapp <DIRECCION_IMPLEMENTACION_GIT>
+```
+
+6. Despliega la aplicación con:
+
+```cmd
+git push webapp main:main
+```
+
+- Nota: Si estás en la rama master el comando sería así:
+
+```cmd
+git push webapp master:master
+```
+
+7. cuando te aparezca el siguiente mensaje en la consola, significa que el deploy fue exitoso
+
+```cmd
+remote: Finished successfully.
+remote: Running post deployment command(s)...
+remote: Deployment successful.
+```
