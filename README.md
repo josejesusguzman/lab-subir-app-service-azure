@@ -87,7 +87,7 @@ az appservice plan create --name <NOMBRE_PLAN_APP_SERVICE> --resource-group <NOM
 
 2. Crea el servicio de App Service. Igualmente puedes hacerlo como desees
 
-- Ajusta el parametro después de --runtime dependiendo del lenguaje de programación que estés usando. Por ejemplo, para PHP sería algo así `"PHP|7.2"`
+- Ajusta el parametro después de --runtime dependiendo del lenguaje de programación que estés usando. Por ejemplo, para PHP sería algo así `"PHP|7.4"`
 
 ```CLI de Azure
 az webapp create -n <NOMBRE_APP_SERVICE> -g <NOMBRE_GRUPO_DE_RECURSOS> -p <NOMBRE_PLAN_APP_SERVICE> --runtime "node|10.6" --deployment-local-git
