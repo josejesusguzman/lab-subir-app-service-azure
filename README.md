@@ -1,7 +1,5 @@
 # Lab de Azure App Service
 
-- **[Grabación de la sesión en vivo]()**
-
 **Azure App Service** es un servicio PaaS que te permite  crear aplicaciones web que se pueden desplegar en el internet público.
 
 Puede ser usado para realizar:
